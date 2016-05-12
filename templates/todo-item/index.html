@@ -1,0 +1,21 @@
+<div class="todo"  ng-class="{completed: todo.completed === true}">
+  <div class="content">
+    <div class="todo__header">
+      {{ todo.title }}
+    </div>
+    <div class="todo__body">
+      {{ todo.content }}
+      <div class="">
+
+      </div>
+    </div>
+  </div>
+  <div class="ctrls">
+    <div class="complete">
+      <img src="/images/ic_done.png" alt="" ng-click="complete()"/>
+    </div>
+    <div class="close">
+      <img src="/images/ic_close.png" alt="" ng-click="todo.remove()"/>
+    </div>
+  </div>
+</div>

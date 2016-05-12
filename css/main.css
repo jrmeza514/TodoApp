@@ -1,0 +1,36 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #3F51B5;
+}
+.todoApp{
+  max-width: 600px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.todo-add-item input, .todo-add-item textarea{
+  width: 100%;
+  font-size: 1.1em;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  margin: 2px 0;
+  resize: none;
+  outline: none;
+  background-color: #ECEFF1;
+  border-radius: 2px;
+}
+.todo-add-item input.ng-dirty, .todo-add-item textarea.ng-dirty{
+  color: #E91E63;
+}
+.todo-add-item input.ng-pristine, .todo-add-item textarea.ng-pristine{
+
+  color: #2d2d2d;
+
+
+}
+
+.todo-list{
+
+}

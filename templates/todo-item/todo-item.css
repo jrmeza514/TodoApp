@@ -1,0 +1,39 @@
+.todo{
+  background-color: #009688;
+  color: #2d2d2d;
+  font-family: Arial;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  margin: 2px 0;
+}
+.todo .content {
+  width: 90%;
+}
+.todo .ctrls .done , .todo .ctrls .done {
+  display: block;
+  cursor: pointer;
+}
+.todo .ctrls img{
+  height: 25px;
+}
+.todo:hover{
+  background-color: #00BFA5;
+}
+.todo.completed{
+  background-color: #D32F2F;
+}
+.todo.completed:hover{
+  background-color: #F44336;
+}
+.todo.completed .todo__header, .todo.completed .todo__body{
+  text-decoration: line-through;
+}
+.todo__header{
+  font-size: 1.4em;
+}
+
+.todo__body{
+
+}

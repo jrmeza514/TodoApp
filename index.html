@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>To Do App</title>
+
+    <!--  Angular JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <!-- Todo Class Import -->
+    <script src="js/todo.js" charset="utf-8"></script>
+    <!--  Main App Script -->
+    <script src="js/app.js" charset="utf-8"></script>
+    <!--  Todo Item Directive and Controller -->
+    <script src="templates/todo-item/js/main.js" charset="utf-8"></script>
+
+    <!--  StylSheets -->
+    <link rel="stylesheet" href="/css/main.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="/templates/todo-item/todo-item.css" media="screen" title="no title" charset="utf-8">
+  </head>
+
+
+  <body >
+    <div class="todoApp" ng-controller="TodoAppController">
+      <div class="todo-add-item" ng-controller="NewTodoController">
+        <form class="todo-add-item__form" name="todo-add-item__form" >
+          <input type="text" name="todo-title" value="" placeholder="Grocery Shopping" ng-model="newTodo.title">
+          <textarea name="todo-body" placeholder="Buy milk and shit." rows="3" ng-model="newTodo.content"></textarea>
+          <input type="submit" value="Add Item" ng-click="addTodo( newTodo.title , newTodo.content)"/>
+        </form>
+      </div>
+      <div class="todo-list">
+        <todo-item todo='todo' ng-repeat="todo in todos" save="saveTodos"></todo-item>
+      </div>
+    </div>
+  </body>
+</html>
